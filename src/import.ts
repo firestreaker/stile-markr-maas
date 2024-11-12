@@ -147,7 +147,7 @@ export const importResults = async (results: ITestResult[]) => {
 
         // update if newer marks are higher
         if (updatedValues.marksAvalilable || updatedValues.marksObtained) {
-          await db
+          await tx
             .update(schema.results)
             .set(updatedValues)
             .where(
