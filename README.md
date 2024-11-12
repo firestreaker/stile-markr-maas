@@ -24,3 +24,4 @@ This POC/solution/MVP uses [Bun](https://bun.sh/) to serve a lightweight web ser
  - As I didn't have docker set up on my PC (and had some initial admin installation issues at the start), sqlite was chosen as the db in the interest of time
  - Normally I'm used to development on a mac, but only had windows available this time
  - Some things are a bit barebone (like the manual routing and type coersion/parsing), but I tried to limit this to what I expect to get away with in 2-3 hours
+ - We are storing students in a seperate table as I expect this is the kinds of analytics people tend to want in the future, did not do this for tests since there wasn't much info on them but we could do that in the future if that comes up
