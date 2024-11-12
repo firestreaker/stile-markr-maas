@@ -10,11 +10,11 @@ export const calculateMean = (marks: number[]) => {
 
 export const calculateStandardDeviation = (marks: number[]) => {
   const count = marks.length;
-  const meanObtained =
+  const mean =
     marks.reduce((accumulator, currentValue) => accumulator + currentValue) /
     count;
   return Math.sqrt(
-    marks.map((m) => Math.pow(m - meanObtained, 2)).reduce((a, b) => a + b) /
+    marks.map((m) => Math.pow(m - mean, 2)).reduce((a, b) => a + b) /
       count
   );
 };

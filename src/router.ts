@@ -13,13 +13,6 @@ export async function fetch(request: Request) {
 
   if (path === "/") return new Response("ok");
 
-  if (path === "/delete") {
-    await db.delete(schema.students);
-    await db.delete(schema.results);
-
-    return new Response("ok");
-  }
-
   if (path === "/results") {
     const x = await db.select().from(schema.results);
     console.log(x);
