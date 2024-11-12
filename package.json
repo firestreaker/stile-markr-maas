@@ -1,0 +1,23 @@
+{
+  "name": "stile-markr-maas",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun --hot run server.ts",
+    "serve": "bun run server.ts",
+    "test": "bun test",
+    "migrate:run": "bun run db/migrate.ts",
+    "migrate:make": "bunx drizzle-kit generate --dialect sqlite --schema ./db/schema.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "drizzle-kit": "^0.28.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.36.1",
+    "fast-xml-parser": "^4.5.0"
+  }
+}
